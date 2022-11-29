@@ -7,10 +7,8 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Ширина: ");
-        int width = scanner.nextInt();
-        System.out.print("Высота: ");
-        int height = scanner.nextInt();
+        int width = dataRequest("Ширина: ");
+        int height = dataRequest("Высота: ");
         scanner.close();
 
 
@@ -28,13 +26,19 @@ public class Task3 {
     }
 
     public static void drawVerticalLine (int width,int height ){
-        for (int i = 0; i < height-2; i++) {
+        for (int i = 0; i < height; i++) {
             System.out.print("|");
             for (int j = 0; j < width; j++) {
                 System.out.print(" ");
             }
             System.out.println("|");
         }
+    }
+
+    public static int dataRequest (String message){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(message);
+        return scanner.nextInt();
     }
 
 }

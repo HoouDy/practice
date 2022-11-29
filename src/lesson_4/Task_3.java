@@ -26,7 +26,7 @@ public class Task_3 {
 
 
         // Рисуем "стены"
-        for (int i = 0; i < height-2; i++) {
+        for (int i = 0; i < height; i++) {
             System.out.print(verticalLine);
             for (int j = 0; j < width; j++) {
                 System.out.print(corner);
